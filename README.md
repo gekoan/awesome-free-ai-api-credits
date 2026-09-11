@@ -47,6 +47,25 @@ Use this directory to compare advertised model availability, signup promotions, 
 | [Deepgram](https://deepgram.com/) | Flux STT/TTS, Nova-3, Whisper Large, Voice Agent API | Register and get free $200 credit | [Sign up](https://deepgram.com/) |
 | [xKiro](https://xkiro.com/) | 105+ models from OpenAI, Anthropic, Google, DeepSeek, xAI, Qwen, GLM, Mistral, Meta | Free top models | [Open xKiro](https://xkiro.com/) |
 
+
+## Edit the configuration ##
+Paste the following configuration block into the file. Make sure to replace *your_agent_router_api_key* with the API key you generated on the provider Token Console:
+
+{
+  "autoUpdatesChannel": "latest",
+  "theme": "light",
+  "model": "opus",
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://agentrouter.org",
+    "ANTHROPIC_AUTH_TOKEN": "your_agent_router_api_key",
+    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-8",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-4-8"
+  }
+}
+
 ## Before you use an AI API gateway
 
 - **Verify model identity.** A listed model name does not guarantee that every request is served by the original provider or an identical model version. Run your own test prompts before using a gateway in production.
