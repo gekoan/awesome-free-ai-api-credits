@@ -11,6 +11,7 @@ Use this directory to compare advertised model availability, signup promotions, 
 
 - [AI API providers: models, free credits, and rewards](#ai-api-providers-models-free-credits-and-rewards)
 - [More AI API providers and free-model platforms](#more-ai-api-providers-and-free-model-platforms)
+- [Configure Claude Code with your provider](#configure-claude-code-with-agentrouter)
 - [Before you use an AI API gateway](#before-you-use-an-ai-api-gateway)
 
 ## AI API providers: models, free credits, and rewards
@@ -47,17 +48,20 @@ Use this directory to compare advertised model availability, signup promotions, 
 | [Deepgram](https://deepgram.com/) | Flux STT/TTS, Nova-3, Whisper Large, Voice Agent API | Register and get free $200 credit | [Sign up](https://deepgram.com/) |
 | [xKiro](https://xkiro.com/) | 105+ models from OpenAI, Anthropic, Google, DeepSeek, xAI, Qwen, GLM, Mistral, Meta | Free top models | [Open xKiro](https://xkiro.com/) |
 
+## Configure Claude Code with your provider
 
-## Edit the configuration ##
-Paste the following configuration block into the file. Make sure to replace *your_agent_router_api_key* with the API key you generated on the provider Token Console:
+### Claude Code Edit the configuration
 
+Paste the following configuration block into the file. Replace `your_agent_router_api_key` with the API key you generated on the provider Token Console:
+
+```json
 {
   "autoUpdatesChannel": "latest",
   "theme": "light",
   "model": "opus",
   "env": {
-    "ANTHROPIC_BASE_URL": "https://agentrouter.org",
-    "ANTHROPIC_AUTH_TOKEN": "your_agent_router_api_key",
+    "ANTHROPIC_BASE_URL": "https://yourprovider.org",
+    "ANTHROPIC_AUTH_TOKEN": "your_router_api_key",
     "ANTHROPIC_API_KEY": "",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-8",
@@ -65,6 +69,7 @@ Paste the following configuration block into the file. Make sure to replace *you
     "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-4-8"
   }
 }
+```
 
 ## Before you use an AI API gateway
 
